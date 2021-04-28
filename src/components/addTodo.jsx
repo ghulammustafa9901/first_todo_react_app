@@ -24,7 +24,6 @@ class AddTodo extends Component {
     };
     this.state.todoObj.push(newObj);
     const todoObj = this.state.todoObj;
-    this.textbox.value = "";
     this.setState({ todoObj, submitDisable: true, resetDisable: false });
   };
 
