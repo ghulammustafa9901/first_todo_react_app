@@ -25,11 +25,11 @@ class AddTodo extends Component {
     this.state.todoObj.push(newObj);
     const todoObj = this.state.todoObj;
     this.setState({
+      text: "",
       todoObj,
       submitDisable: true,
       resetDisable: false,
     });
-    Array.from((document.getElementById("todoText").value = ""));
   };
 
   handleChangeAddTodo = (e) => {
@@ -82,7 +82,7 @@ class AddTodo extends Component {
                   type="text"
                   placeholder="Type some text for add todo list"
                   onChange={this.handleChangeAddTodo}
-                  defaultValue={this.state.text}
+                  value={this.state.text}
                   // ref={(el) => (this.textbox = el)}
                 />
               </Form.Group>
