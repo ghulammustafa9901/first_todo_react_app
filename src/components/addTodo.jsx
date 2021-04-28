@@ -11,7 +11,7 @@ class AddTodo extends Component {
     todoObj: [
       { id: 1, text: "hi" },
       { id: 2, text: "by" },
-      { id: 3, text: "hiby" },
+      // { id: 3, text: "hiby" },
     ],
     updateableObject: { id: "", text: "" },
   };
