@@ -24,7 +24,12 @@ class AddTodo extends Component {
     };
     this.state.todoObj.push(newObj);
     const todoObj = this.state.todoObj;
-    this.setState({ todoObj, submitDisable: true, resetDisable: false });
+    this.setState({
+      todoObj,
+      submitDisable: true,
+      resetDisable: false,
+    });
+    Array.from((document.getElementById("todoText").value = ""));
   };
 
   handleChangeAddTodo = (e) => {
@@ -37,6 +42,9 @@ class AddTodo extends Component {
   handleDelete = (id) => {
     const todoObj = this.state.todoObj.filter((d) => d.id !== id);
     this.setState({ todoObj });
+    if (todoObj.length === 0) {
+      this.setState({ resetDisable: true });
+    }
   };
 
   handleReset = () => {
@@ -74,6 +82,7 @@ class AddTodo extends Component {
                   type="text"
                   placeholder="Type some text for add todo list"
                   onChange={this.handleChangeAddTodo}
+                  defaultValue={this.state.text}
                   // ref={(el) => (this.textbox = el)}
                 />
               </Form.Group>

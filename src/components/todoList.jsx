@@ -16,8 +16,8 @@ class TodoList extends Component {
               <Form.Group controlId="todoText" className="w-100 mb-0 mr-3">
                 <Form.Control
                   type="text"
-                  placeholder={this.props.todo.text}
-                  // value={this.props.todo.text}
+                  // placeholder={this.props.todo.text}
+                  defaultValue={this.props.todo.text}
                   onChange={this.props.onUpdateChange}
                 />
               </Form.Group>
