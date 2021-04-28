@@ -16,12 +16,14 @@ class TodoList extends Component {
               <Form.Group controlId="todoText" className="w-100 mb-0 mr-3">
                 <Form.Control
                   type="text"
-                  // placeholder={this.props.todo.text}
-                  value={this.props.todo.text}
+                  placeholder={this.props.todo.text}
+                  // value={this.props.todo.text}
                   onChange={this.props.onUpdateChange}
                 />
               </Form.Group>
-              <Button variant="primary">Save</Button>
+              <Button variant="primary" type="submit">
+                Save
+              </Button>
             </Form>
           ) : (
             <div className="d-flex align-items-center justify-content-between p-3">

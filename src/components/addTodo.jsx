@@ -80,6 +80,7 @@ class AddTodo extends Component {
               <Button
                 variant="primary"
                 className="mr-2"
+                type="submit"
                 disabled={this.state.submitDisable}
               >
                 Submit
